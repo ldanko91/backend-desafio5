@@ -1,0 +1,17 @@
+{{> nav}}
+
+<h1>Consulta de productos</h1>
+<button id="formButton">Cargar productos</button>
+{{#if hasAny}}
+    {{#each products}}
+        <h2>{{this.title}}</h2>
+        <img src="{{this.thumbnail}}" alt="">
+        <p>{{this.price}}</p>
+    {{/each}}
+{{/if}}
+<script>
+      const formButton = document.getElementById("formButton");
+      formButton.addEventListener("click", (event) => {
+        window.location = "/";
+      });
+</script>
