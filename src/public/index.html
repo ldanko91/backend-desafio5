@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat en vivo y carga de productos</title>
+</head>
+
+<body>
+  <h1>Desafío 6 de Backend</h1>
+
+  <section id="chat">
+    <h3>Chat en vivo!</h3>
+
+    <form id="messageForm">
+      <input id="usernameInput" type="mail" placeholder="Inserta tu e-mail" />
+      <input id="messageInput" type="text" placeholder="Mensaje" />
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <ul id="messagesPool"></ul>
+  </section>
+
+  <section id="cargaProds">
+    <h3>Carga de productos</h3>
+    <form id="newProdForm">
+      <input id="newProdNameInput" type="text" placeholder="Nombre de nuevo producto" />
+      <input id="newProdPriceInput" type="number" placeholder="Precio de nuevo producto" />
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <table id="productosPool">
+      <tbody>
+        <tr>
+          <th>Nombre</th>
+          <th>Precio</th>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="./client.socket.js"></script>
+</body>
+
+</html>
