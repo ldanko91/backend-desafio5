@@ -2,6 +2,7 @@
 
 <h1>Consulta de productos</h1>
 <button id="formButton">Cargar productos</button>
+<button id="putButton">Editar productos</button>
 {{#if hasAny}}
     {{#each products}}
         <h2>{{this.title}}</h2>
@@ -12,6 +13,12 @@
 <script>
       const formButton = document.getElementById("formButton");
       formButton.addEventListener("click", (event) => {
-        window.location = "/";
+        window.location = "/api/productos/carga";
+      });
+        </script>
+        <script>
+          const putButton = document.getElementById("putButton");
+          putButton.addEventListener("click", (event) => {
+            window.location = "/api/productos/editar";
       });
 </script>

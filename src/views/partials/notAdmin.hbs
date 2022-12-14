@@ -1,0 +1,11 @@
+{{> nav}}
+
+<h1>Usted no es administrador</h1>
+<button id="volverHome">Volver al home</button>
+
+<script>
+  const volverHome = document.getElementById("volverHome");
+  volverHome.addEventListener("click", (event) => {
+    window.location = "/api/productos";
+  });
+</script>

@@ -9,7 +9,7 @@
   <body>
     <button id="productButton">Ver productos</button>
     <h1>Carga un producto!</h1>
-    <form action="/product" method="post">
+    <form action="/productForm" method="post">
       <input type="text" placeholder="Nombre" name="name" /><br />
       <input type="number" placeholder="Precio" name="price" /><br />
       <input type="text" placeholder="Imagen" name="thumbnail" /><br />
@@ -19,7 +19,7 @@
     <script>
       const productButton = document.getElementById("productButton");
       productButton.addEventListener("click", (event) => {
-        window.location = "/product";
+        window.location = "/api/productos";
       });
     </script>
   </body>

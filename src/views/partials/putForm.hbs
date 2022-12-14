@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Modificar artículo</title>
+</head>
+
+<body>
+  <button id="productButton">Ver productos</button>
+  <h1>Modifica un producto!</h1>
+  <form action="/editar" method="put">
+    <input type="number" placeholder="ID Producto" name="id" /><br />
+    <input type="text" placeholder="Nombre" name="name" /><br />
+    <input type="number" placeholder="Precio" name="price" /><br />
+    <input type="text" placeholder="Imagen" name="thumbnail" /><br />
+    {{!-- <input type="submit" value="1- Cargar cambios" /><br> --}}
+    <input id="putButton" type="submit" value="2- Confirmar cambios" />
+  </form>
+
+  <script>
+    const productButton = document.getElementById("productButton");
+    productButton.addEventListener("click", (event) => {
+      window.location = "/product";
+    });
+  </script>
+
+  <script>
+    const putButton = document.getElementById("putButton");
+    putButton.addEventListener("click", (event) => {
+      event.preventDefault();
+    });
+  </script>
+
+</body>
+
+</html>
